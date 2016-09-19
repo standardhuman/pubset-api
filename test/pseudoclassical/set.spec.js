@@ -5,6 +5,10 @@ describe('set test', function() {
 
     'use strict';
     //Instantiate the sets
+    var s1 = new Set();
+    var s2 = new Set();
+    var d1 = new Set();
+    var d2 = new Set();
 
     it('should be empty sets', function() {
         expect(s1.isEmpty()).to.be.equal(true);

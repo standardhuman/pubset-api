@@ -1,11 +1,14 @@
 var expect = require('chai').expect,
-    Set = require('../../pseudoclassical/set.js');
+    Set = require('../../es6/set.js');
 
 describe('set test', function() {
 
     'use strict';
     //Instantiate the sets
-
+    const s1 = new Set();
+    const s2 = new Set();
+    const d1 = new Set();
+    const d2 = new Set();
 
     it('should be empty sets', function() {
         expect(s1.isEmpty()).to.be.equal(true);

@@ -1,5 +1,5 @@
 'use strict';
-
+// functional
 var Set = function() {
 
     var setInstance = {}
@@ -24,7 +24,14 @@ var Set = function() {
     };
 
     setInstance.contains = function(element) {
+        for(var i = 0; i < elements.length; i++){
+            if(elements[i] === element){
+                return true;
 
+            }else{
+                return false;
+            }
+        }
     };
 
     setInstance.union = function(s) {

@@ -1,12 +1,14 @@
 'use strict';
-
+// es6
 class Set {
   constructor(){
-
-  }
+    this.elements = [];
+  };
 
   add(element) {
-
+    if (this.elements.indexOf(element) === -1) {
+        this.elements.push(element);
+    }
   };
 
   remove(element){
@@ -14,18 +16,18 @@ class Set {
   };
 
   isEmpty() {
-
+    return this.elements.length > 0 ? false : true;
   };
 
   size(){
-
+    return this.elements.length;
   };
 
   contains(element) {
 
   };
 
-  intersect = function(s) {
+  intersect(s) {
     var resultSet = new Set();
     for (var i = 0; i < this.elements.length; i++) {
         if (s.contains(this.elements[i])) {
@@ -35,7 +37,7 @@ class Set {
     return resultSet;
   };
 
-  difference = function(s) {
+  difference(s) {
     var resultSet = new Set();
     for (var i = 0; i < this.elements.length; i++) {
         if (!s.contains(this.elements[i])) {

@@ -1,15 +1,18 @@
 'use strict';
-
+// pseudoclassical
 var Set = function() {
   this.elements = [];
 }
+
+Set.prototype.isEmpty =function() {
+      return this.elements.length > 0 ? false : true;
+  };
 
 Set.setInstance = function(element) {
     if (this.elements.indexOf(element) === -1) {
         this.elements.push(element);
     }
 };
-
 
 Set.prototype.remove = function(element){
     var index = this.elements.indexOf(element);
